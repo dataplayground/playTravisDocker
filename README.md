@@ -7,3 +7,5 @@ automate play framework on travis to deploy to docker hub if tests pass.
 
 
 using `activator docker:publishLocal`.
+
+inspired by https://github.com/adamalex/play-docker-ci
