@@ -1,6 +1,15 @@
+sudo: required
 language: scala
 scala:
    - 2.11.7
 jdk:
-  - oraclejdk8
+   - oraclejdk8
+services:
+   - docker
 
+docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+
+script
+   # tests run by default using sbt ++$TRAVIS_SCALA_VERSION test
+   # packaging into docker + push
+   - "sbt ++$TRAVIS_SCALA_VERSION docker:publishLocal"
