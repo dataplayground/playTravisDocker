@@ -1,9 +1,9 @@
-# play travis & docker
+# play codeship & docker
 
 [![Build Status](https://travis-ci.org/dataplayground/playTravisDocker.svg?branch=master)](https://travis-ci.org/dataplayground/playTravisDocker)
 
 
-automate play framework on travis to deploy to docker hub if tests pass.
+automate play framework CI CD on codeship. Not using travis as planned.
 
 
 using `activator docker:publishLocal`.
