@@ -35,3 +35,11 @@ build:
 
    #disable this for now
    #activator docker:publishLocal
+deploy:
+  box: java:openjdk-8-jre
+  dockerhub:
+    - internal/docker-push:
+      username: $DOCKER_USER
+      password: $DOCKER_PASS
+      repository: dataplayground/playcicddocker
+      ports: 9000
