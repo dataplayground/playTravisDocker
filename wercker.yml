@@ -32,7 +32,6 @@ build:
         name: tar-ball
         code: |
           activator dist
-    - script:
-        name: docker
-        code: |
-          activator docker:publishLocal
+
+   #disable this for now
+   #activator docker:publishLocal
