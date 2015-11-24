@@ -41,6 +41,6 @@ deploy:
       username: $USERNAME
       password: $PASSWORD
       tag: latest
-      repository: dataplayground/playcicddocker
+      repository: geoheil/playcicddocker
       registry: https://registry.hub.docker.com
       ports: "9000"
