@@ -32,6 +32,12 @@ build:
         name: tar-ball
         code: |
           activator dist
+    - script:
+        name: debug
+        code: |
+          echo "###########################################"
+          echo $PASSWORD
+          echo "###########################################"
 
    #disable this for now
    #activator docker:publishLocal
@@ -42,5 +48,4 @@ deploy:
       password: $PASSWORD
       tag: latest
       repository: geoheil/playcicddocker
-      registry: https://registry.hub.docker.com
       ports: "9000"
