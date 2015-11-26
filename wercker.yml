@@ -35,9 +35,10 @@ build:
     - script:
         name: debug
         code: |
-          echo "###########################################"
-          echo $PASSWORD
-          echo "###########################################"
+          echo "##################"
+          echo $DOCKER_PASS
+          echo $DOCKER_USER
+          echo "##################"
 
    #disable this for now
    #activator docker:publishLocal
