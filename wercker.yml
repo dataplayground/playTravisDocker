@@ -32,7 +32,12 @@ build:
         name: tar-ball
         code: |
           activator dist
-    - script:
+
+   #disable this for now
+   #activator docker:publishLocal
+deploy:
+  steps:
+    - - script:
         name: debug
         code: |
           echo "##################"
@@ -40,10 +45,6 @@ build:
           echo $DOCKER_USER
           echo "##################"
 
-   #disable this for now
-   #activator docker:publishLocal
-deploy:
-  steps:
     - internal/docker-push:
       username: $USERNAME
       password: $PASSWORD
