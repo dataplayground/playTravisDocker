@@ -37,7 +37,7 @@ build:
    #activator docker:publishLocal
 deploy:
   steps:
-    - - script:
+    - script:
         name: debug
         code: |
           echo "##################"
