@@ -37,17 +37,9 @@ build:
    #activator docker:publishLocal
 deploy:
   steps:
-    - script:
-        name: debug
-        code: |
-          echo "##################"
-          echo $DOCKER_PASS
-          echo $DOCKER_USER
-          echo "##################"
-
     - internal/docker-push:
-      username: $USERNAME
-      password: $PASSWORD
+      username: $DOCKER_USER
+      password: $DOCKER_PASS
       tag: latest
       repository: geoheil/playcicddocker
       ports: "9000"
